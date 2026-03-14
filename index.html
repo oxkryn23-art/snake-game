@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Snake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Start Screen -->
+    <div class="screen start-screen" id="startScreen">
+      <div class="glow-title">NEON SNAKE</div>
+      <p class="tagline">A classic reimagined</p>
+      <div class="difficulty-picker">
+        <button class="diff-btn active" data-speed="120">Easy</button>
+        <button class="diff-btn" data-speed="80">Medium</button>
+        <button class="diff-btn" data-speed="50">Hard</button>
+      </div>
+      <button class="play-btn" id="playBtn">PLAY</button>
+      <div class="controls-hint">
+        <span>WASD</span> or <span>Arrow Keys</span> to move &bull; <span>P</span> to pause
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="screen game-screen hidden" id="gameScreen">
+      <div class="hud">
+        <div class="hud-item">
+          <div class="hud-label">SCORE</div>
+          <div class="hud-value" id="score">0</div>
+        </div>
+        <div class="hud-item">
+          <div class="hud-label">HIGH SCORE</div>
+          <div class="hud-value" id="highScore">0</div>
+        </div>
+        <div class="hud-item">
+          <div class="hud-label">LENGTH</div>
+          <div class="hud-value" id="length">3</div>
+        </div>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        <div class="pause-overlay hidden" id="pauseOverlay">
+          <div class="pause-text">PAUSED</div>
+          <div class="pause-sub">Press P to resume</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div class="screen gameover-screen hidden" id="gameoverScreen">
+      <div class="gameover-title">GAME OVER</div>
+      <div class="final-score">
+        <span id="finalScore">0</span>
+        <small>points</small>
+      </div>
+      <div class="new-record hidden" id="newRecord">NEW HIGH SCORE!</div>
+      <button class="play-btn" id="retryBtn">PLAY AGAIN</button>
+      <button class="back-btn" id="menuBtn">MAIN MENU</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
