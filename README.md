@@ -1,5 +1,7 @@
 # Neon Snake
 
+**[Play it in your browser](https://oxkryn23-art.github.io/snake-game/)**
+
 A fancy, neon-themed Snake game built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
